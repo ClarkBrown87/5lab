@@ -83,6 +83,12 @@
     <None Include="default.geom">
       <Filter>Файлы ресурсов\Shaders</Filter>
     </None>
+    <None Include="skybox.frag">
+      <Filter>Файлы ресурсов\Shaders</Filter>
+    </None>
+    <None Include="skybox.vert">
+      <Filter>Файлы ресурсов\Shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaderClass.h">

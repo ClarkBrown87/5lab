@@ -11,6 +11,7 @@ using json = nlohmann::json;
 class Model
 {
 public:
+	// Loads in a model from a file and stores tha information in 'data', 'JSON', and 'file'
 	Model(const char* file);
 
 	void Draw(Shader& shader, Camera& camera);

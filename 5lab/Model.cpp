@@ -224,7 +224,6 @@ std::vector<Texture> Model::getTextures()
 
 		if (!skip)
 		{
-			// Load diffuse texture
 			if (texPath.find("baseColor") != std::string::npos || texPath.find("diffuse") != std::string::npos)
 			{
 				Texture diffuse = Texture((fileDirectory + texPath).c_str(), "diffuse", loadedTex.size());

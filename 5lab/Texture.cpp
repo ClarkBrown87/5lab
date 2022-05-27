@@ -19,25 +19,12 @@ Texture::Texture(const char* image, const char* texType, GLuint slot)
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-	if (type == "normal")
+	if (numColCh == 4)
 		glTexImage2D
 		(
 			GL_TEXTURE_2D,
-			0,
-			GL_RGB,
-			widthImg,
-			heightImg,
 			0,
 			GL_RGBA,
-			GL_UNSIGNED_BYTE,
-			bytes
-		);
-	else if (numColCh == 4)
-		glTexImage2D
-		(
-			GL_TEXTURE_2D,
-			0,
-			GL_SRGB_ALPHA,
 			widthImg,
 			heightImg,
 			0,
@@ -50,7 +37,7 @@ Texture::Texture(const char* image, const char* texType, GLuint slot)
 		(
 			GL_TEXTURE_2D,
 			0,
-			GL_SRGB,
+			GL_RGBA,
 			widthImg,
 			heightImg,
 			0,
@@ -63,7 +50,7 @@ Texture::Texture(const char* image, const char* texType, GLuint slot)
 		(
 			GL_TEXTURE_2D,
 			0,
-			GL_SRGB,
+			GL_RGBA,
 			widthImg,
 			heightImg,
 			0,
